@@ -11,20 +11,26 @@
 
 <body>
     <main class="w-full h-auto bg-black px-0 py-0">
-        <div class="px-5 py-3 mx-auto md:w-[90%]">
-            <nav class="flex justify-between items-center mt-5 md:position-sticky md:top-0">
-                <h3 class="font-thin text-white font-semibold tracking-tighter text-xl">Lard & Troll</h3>
-                <h3 class="font-thin text-white font-semibold tracking-tighter text-xl md:hidden"><i
-                        class="ri-menu-line"></i>
+        <nav class="w-full md:sticky top-0 z-50 bg-black/80 backdrop-blur-md h-[80px] flex items-center">
+            <div class="w-full md:w-[90%] mx-auto flex justify-between items-center px-5">
+                <h3 class="text-white font-semibold text-xl">Lard & Troll</h3>
+
+                <!-- mobile menu -->
+                <h3 class="text-white text-xl md:hidden">
+                    <i class="ri-menu-line"></i>
                 </h3>
-                <div class="hidden md:flex gap-10">
-                    <h3 class=" font-thin text-white font-semibold tracking-tighter text-xl">About</h3>
-                    <h3 class=" font-thin text-white font-semibold tracking-tighter text-xl">Product</h3>
-                    <h3 class=" font-thin text-white font-semibold tracking-tighter text-xl">Team</h3>
-                    <h3 class=" font-thin text-white font-semibold tracking-tighter text-xl">Features</h3>
-                    <h3 class=" font-thin text-white font-semibold tracking-tighter text-xl">Contact</h3>
+
+                <!-- desktop menu -->
+                <div class="hidden md:flex gap-10 text-white text-xl">
+                    <h3>About</h3>
+                    <h3>Product</h3>
+                    <h3>Team</h3>
+                    <h3>Features</h3>
+                    <h3>Contact</h3>
                 </div>
-            </nav>
+            </div>
+        </nav>
+        <div class="px-5 py-3 mx-auto md:w-[90%]">
             <section id="hero" class="mt-10 flex flex-col w-[100%] md:w-[60%] lg:w-[50%] gap-6 md:mt-20">
                 <h1
                     class="font-bolder text-white font-medium tracking-normal leading-10 text-5xl md:text-6xl md:leading-12 lg:text-7xl xl:text-9xl lg:leading-16 xl:leading-24">
