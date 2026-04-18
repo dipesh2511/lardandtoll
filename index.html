@@ -11,17 +11,27 @@
 
 <body>
     <main class="w-full h-auto bg-black px-0 py-0">
-        <div class="container px-5 py-3 mx-auto">
-            <nav class="flex justify-between items-center ">
+        <div class="px-5 py-3 mx-auto md:w-[90%]">
+            <nav class="flex justify-between items-center mt-5">
                 <h3 class="font-thin text-white font-semibold tracking-tighter text-xl">Lard & Troll</h3>
-                <h3 class="font-thin text-white font-semibold tracking-tighter text-xl"><i class="ri-menu-line"></i>
+                <h3 class="font-thin text-white font-semibold tracking-tighter text-xl md:hidden"><i
+                        class="ri-menu-line"></i>
                 </h3>
+                <div class="hidden md:flex gap-10">
+                    <h3 class=" font-thin text-white font-semibold tracking-tighter text-xl">About</h3>
+                    <h3 class=" font-thin text-white font-semibold tracking-tighter text-xl">Product</h3>
+                    <h3 class=" font-thin text-white font-semibold tracking-tighter text-xl">Team</h3>
+                    <h3 class=" font-thin text-white font-semibold tracking-tighter text-xl">Features</h3>
+                    <h3 class=" font-thin text-white font-semibold tracking-tighter text-xl">Contact</h3>
+                </div>
             </nav>
-            <section id="hero" class="mt-10 flex flex-col">
-                <h1 class="font-bolder text-white font-medium tracking-normal leading-10 text-5xl">
+            <section id="hero" class="mt-10 flex flex-col w-[100%] md:w-[60%] lg:w-[50%] gap-6 md:mt-20">
+                <h1
+                    class="font-bolder text-white font-medium tracking-normal leading-10 text-5xl md:text-6xl md:leading-12 lg:text-7xl xl:text-9xl lg:leading-16 xl:leading-24">
                     Discover Unique Styles
                 </h1>
-                <p class="font-bolder text-white font-medium tracking-normal leading-none mt-7 text-lg">
+                <p
+                    class="font-bolder text-white font-medium tracking-normal leading-none mt-7 text-lg md:text-xl lg:text-4xl">
                     Welcome to Lard & Toll, where fashion meets creativity. Explore our exclusive collections designed
                     to inspire and elevate your wardrobe
                 </p>
@@ -30,42 +40,56 @@
                     Contact Now
                 </button>
             </section>
-            <section id="image-container" class="mt-10 -mx-5">
-                <div class="w-full h-[300px] bg-[url('./image1.avif')] bg-cover bg-center"></div>
-                <div class="hidden w-full h-[300px] bg-[url('./image2.avif')] bg-cover bg-center"></div>
+            <section id="image-container" class="mt-10 md:flex justify-between -mx-5 lg:mt-15">
+                <div
+                    class="w-full h-[300px] bg-[url('./image1.avif')] bg-cover bg-center md:h-auto md:aspect-square md:w-[48%]">
+                </div>
+                <div class="hidden md:block bg-[url('./image2.avif')] bg-cover bg-center md:aspect-square md:w-[48%]">
+                </div>
             </section>
-            <section id="fashion-story" class="mt-10">
-                <h1 class="font-bolder text-white font-medium tracking-normal leading-10 text-4xl text-center">
-                    Our Fashion Story
-                </h1>
-                <p class="font-bolder text-white font-medium tracking-normal leading-4 mt-5 text-sm">
-                    At Lard & Toll, we are passionate about creating innovative fashion pieces that reflect individual
-                    style and sophistication. Our team of designers and artisans work tirelessly to bring you unique and
-                    trendy collections that set you apart.
-                </p>
-                <p class="font-bolder text-white font-medium tracking-normal leading-4 mt-5 text-sm">
-                    Dedicated to quality and excellence, we source the finest materials and embrace sustainable
-                    practices in our production process. With a focus on craftsmanship and attention to detail, we
-                    ensure each garment tells a story of elegance and beauty.
-                </p>
-                <button
-                    class="mt-10 bg-white text-black font-bold py-3 px-2 w-40 font-medium tracking-normal text-sm rounded-full">
-                    Explore More
-                </button>
+            <section id="fashion-story" class="mt-10 md:flex md:justify-end">
+                <div class="md:w-[60%]">
+                    <h1 class="text-white font-medium text-center md:text-left
+                   text-4xl md:text-5xl lg:text-6xl xl:text-8xl
+                   leading-tight md:leading-tight lg:leading-tight xl:leading-tight">
+                        Our Fashion Story
+                    </h1>
+                    <p class="text-white font-medium mt-5
+                  text-sm md:text-base lg:text-lg xl:text-xl
+                  leading-5 md:leading-6 lg:leading-7 xl:leading-8">
+                        At Lard & Toll, we are passionate about creating innovative fashion pieces that reflect
+                        individual style and sophistication. Our team of designers and artisans work tirelessly
+                        to bring you unique and trendy collections that set you apart.
+                    </p>
+                    <p class="text-white font-medium mt-5
+                  text-sm md:text-base lg:text-lg xl:text-xl
+                  leading-5 md:leading-6 lg:leading-7 xl:leading-8">
+                        Dedicated to quality and excellence, we source the finest materials and embrace sustainable
+                        practices in our production process. With a focus on craftsmanship and attention to detail,
+                        we ensure each garment tells a story of elegance and beauty.
+                    </p>
+                    <button class="mt-10 bg-white text-black font-medium py-3 px-6 w-40 text-sm rounded-full">
+                        Explore More
+                    </button>
+                </div>
             </section>
-            <section id="mid-image" class="mt-10 -mx-5">
-                <div class="w-full h-[300px] bg-[url('./image3.avif')] bg-cover"
+            <section id="mid-image" class="mt-10 -mx-5 md:h-[500px] md:overflow-hidden">
+                <div id="parallax-img" class="w-full h-[300px] bg-[url('./image3.avif')] bg-cover md:hidden"
                     style="background-position: 0% center;"></div>
+                <div
+                    class="w-full h-full bg-[url('./image10.avif')] hidden md:block md:bg-position-[0%_0%] md:bg-no-repeat md:bg-fixed">
+                </div>
             </section>
             <section id="gender-section" class="mt-10 flex-col">
-                <div id="left-section">
-                    <h1 class="font-bolder text-white font-medium tracking-normal leading-10 text-4xl text-left">
+                <div id="left-section" class="md:flex md:flex-wrap md:gap-1">
+                    <h1 class="font-bolder text-white font-medium tracking-normal leading-10 text-4xl text-left md:w-[100%]">
                         Collections
                     </h1>
-                    <p class="font-bolder text-white font-medium tracking-normal leading-4 mt-5 text-sm">
+
+                    <p class="font-bolder text-white font-medium tracking-normal leading-4 mt-5 text-sm md:w-[30%]">
                         Explore Our Range
                     </p>
-                    <p class="font-bolder text-white font-medium tracking-normal leading-4 mt-5 text-sm">
+                    <p class="font-bolder text-white font-medium tracking-normal leading-4 mt-5 text-sm md:w-[60%]">
                         Our collections showcase a blend of modern aesthetics and timeless elegance. From chic casual
                         wear
                         to sophisticated evening attire, each piece is crafted with precision and care to cater to
@@ -290,6 +314,14 @@
             </footer>
         </div>
     </main>
+    <!-- Parallax scroll script -->
+    <script>
+        const img = document.getElementById('parallax-img');
+        window.addEventListener('scroll', () => {
+            const offset = window.scrollY * 0.05;
+            img.style.backgroundPosition = `${offset}% center`;
+        });
+    </script>
 </body>
 
 </html>
