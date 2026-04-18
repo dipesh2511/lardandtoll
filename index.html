@@ -11,7 +11,8 @@
 
 <body>
     <main class="w-full h-auto bg-black px-0 py-0">
-        <nav id="navbar" class="w-full md:sticky top-0 z-50 bg-black/80 backdrop-blur-md h-[80px] flex items-center">
+        <nav id="navbar"
+            class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md h-[80px] flex items-center transition-transform duration-500 ease-in-out">
             <div class="w-full md:w-[90%] mx-auto flex justify-between items-center px-5">
                 <h3 class="text-white font-semibold text-xl">Lard & Troll</h3>
 
@@ -380,20 +381,19 @@
         });
 
         const navbar = document.getElementById('navbar');
-        const hero = document.getElementById('hero');
-        let lastScrollY = 0;
-        
+        let lastScrollY = window.scrollY;
+
         window.addEventListener('scroll', () => {
             const currentScroll = window.scrollY;
 
-            if (currentScroll < lastScrollY) {
-                // Scrolling upward
-                navbar.classList.add('md:sticky');
-            } else if (currentScroll > lastScrollY) {
-                // Scrolling downward
-                navbar.classList.remove('md:sticky');
+            if (currentScroll > lastScrollY && currentScroll > 100) {
+                // scrolling down → hide
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // scrolling up → show
+                navbar.style.transform = 'translateY(0)';
             }
-            
+
             lastScrollY = currentScroll;
         });
     </script>
