@@ -12,7 +12,7 @@
 <body>
     <main class="w-full h-auto bg-black px-0 py-0">
         <nav id="navbar"
-            class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md h-[80px] flex items-center transition-transform duration-500 ease-in-out">
+            class="md:fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md h-[80px] flex items-center transition-transform duration-500 ease-in-out">
             <div class="w-full md:w-[90%] mx-auto flex justify-between items-center px-5">
                 <h3 class="text-white font-semibold text-xl">Lard & Troll</h3>
 
@@ -22,7 +22,7 @@
                 </h3>
 
                 <!-- desktop menu -->
-                <div class="hidden md:flex gap-10 text-white text-xl">
+                <div class="hidden md:flex gap-5 text-white text-xl">
                     <h3>About</h3>
                     <h3>Product</h3>
                     <h3>Team</h3>
@@ -384,17 +384,23 @@
         let lastScrollY = window.scrollY;
 
         window.addEventListener('scroll', () => {
-            const currentScroll = window.scrollY;
+            // apply only on md and above (>=768px)
+            if (window.innerWidth >= 768) {
+                const currentScroll = window.scrollY;
+                
+                if (currentScroll > lastScrollY && currentScroll > 100) {
+                    // scrolling down → hide
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    // scrolling up → show
+                    navbar.style.transform = 'translateY(0)';
+                }
 
-            if (currentScroll > lastScrollY && currentScroll > 100) {
-                // scrolling down → hide
-                navbar.style.transform = 'translateY(-100%)';
+                lastScrollY = currentScroll;
             } else {
-                // scrolling up → show
+                // reset for mobile
                 navbar.style.transform = 'translateY(0)';
             }
-
-            lastScrollY = currentScroll;
         });
     </script>
 </body>
